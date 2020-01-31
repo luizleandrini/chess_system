@@ -47,6 +47,11 @@ public class Program {
 				System.out.println(e.getMessage());
 				sc.hasNextLine();
 			}
+			if(chessMatch.getPromoted() != null) {
+				System.out.println("Entre com uma peça para ser promovida (B/H/R/Q): ");
+				String type = sc.nextLine();
+				chessMatch.replacePromotedPiece(type);
+			}
 		}
 		UI.clearScreen();
 		UI.printMatch(chessMatch, captured);
